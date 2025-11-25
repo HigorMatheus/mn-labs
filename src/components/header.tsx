@@ -42,12 +42,12 @@ export function Header() {
 					>
 						Tecnologias
 					</a>
-					{/* <a
+					<a
 						href="#projetos"
 						className="text-sm font-semibold leading-6 text-muted-foreground hover:text-foreground transition-colors"
 					>
 						Projetos
-					</a> */}
+					</a>
 					<a
 						href="#sobre"
 						className="text-sm font-semibold leading-6 text-muted-foreground hover:text-foreground transition-colors"
@@ -79,7 +79,7 @@ export function Header() {
 					<button
 						type="button"
 						className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
-						onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+						onClick={() => setMobileMenuOpen((prevOpen) => !prevOpen)}
 					>
 						<span className="sr-only">Abrir menu</span>
 						{mobileMenuOpen ? (
@@ -106,12 +106,12 @@ export function Header() {
 						>
 							Tecnologias
 						</a>
-						{/* <a
+						<a
 							href="#projetos"
 							className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-muted-foreground hover:bg-muted hover:text-foreground"
 						>
 							Projetos
-						</a> */}
+						</a>
 						<a
 							href="#sobre"
 							className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-muted-foreground hover:bg-muted hover:text-foreground"
