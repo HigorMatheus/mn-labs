@@ -1,5 +1,6 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
+import { whatsAppLink } from "@/lib/constants";
 
 export function Footer() {
 	return (
@@ -31,12 +32,12 @@ export function Footer() {
 						</p>
 						<div className="flex gap-4">
 							<a
-								href="#github"
+								href="https://www.instagram.com/mn.labstech/?utm_source=qr&igsh=anRleXI4YzN0ZWJn"
 								className="text-muted-foreground hover:text-foreground transition-colors"
 							>
-								<Github className="h-5 w-5" />
+								<Instagram className="h-5 w-5" />
 							</a>
-							<a
+							{/* <a
 								href="#linkedin"
 								className="text-muted-foreground hover:text-foreground transition-colors"
 							>
@@ -47,7 +48,7 @@ export function Footer() {
 								className="text-muted-foreground hover:text-foreground transition-colors"
 							>
 								<Twitter className="h-5 w-5" />
-							</a>
+							</a> */}
 						</div>
 					</div>
 
@@ -86,45 +87,45 @@ export function Footer() {
 						</ul>
 					</div> */}
 
-					{/* <div>
+					<div>
 						<h3 className="text-sm font-semibold text-foreground mb-4">
 							Empresa
 						</h3>
 						<ul className="space-y-3">
-							<li>
+							{/* <li>
 								<a
 									href="#sobre"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Sobre Nós
 								</a>
-							</li>
-							<li>
+							</li> */}
+							{/* <li>
 								<a
 									href="#portfolio"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Portfólio
 								</a>
-							</li>
-							<li>
+							</li> */}
+							{/* <li>
 								<a
 									href="#blog"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Blog
 								</a>
-							</li>
+							</li> */}
 							<li>
 								<a
-									href="#contato"
+									href={whatsAppLink}
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Contato
 								</a>
 							</li>
 						</ul>
-					</div> */}
+					</div>
 				</div>
 
 				<div className="mt-12 border-t border-border/40 pt-8">

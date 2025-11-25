@@ -1,5 +1,8 @@
+"use client";
+
 import { ArrowRight, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { whatsAppLink } from "@/lib/constants";
 
 export function Hero() {
 	return (
@@ -23,7 +26,13 @@ export function Hero() {
 					</p>
 
 					<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-						<Button size="lg" className="text-base px-8 group">
+						<Button
+							size="lg"
+							className="text-base px-8 group"
+							onClick={() => {
+								window.location.href = whatsAppLink;
+							}}
+						>
 							Começar Projeto
 							<ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
 						</Button>
