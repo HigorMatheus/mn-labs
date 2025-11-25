@@ -17,19 +17,20 @@ export function Projects() {
 		// 	// image: "/modern-ecommerce-dashboard.png",
 		// 	tags: ["Next.js", "TypeScript", "Stripe"],
 		// },
-		// {
-		// 	title: "E-commerce Platform",
-		// 	description:
-		// 		"Plataforma completa de e-commerce com carrinho, checkout e painel admin desenvolvida em Next.js.",
-		// 	image: "/modern-ecommerce-dashboard.png",
-		// 	tags: ["Next.js", "TypeScript", "Stripe"],
-		// },
-		// {
-		//   title: "Dashboard Analytics",
-		//   description: "Dashboard interativo de analytics em tempo real com visualizações de dados complexas.",
-		//   image: "/analytics-dashboard-dark-theme.png",
-		//   tags: ["React", "D3.js", "WebSocket"],
-		// },
+		{
+			title: "E-commerce Platform",
+			description:
+				"Plataforma completa de e-commerce com carrinho, checkout e painel admin desenvolvida em Next.js.",
+			image: "/modern-ecommerce-dashboard.png",
+			tags: ["Next.js", "TypeScript", "Stripe"],
+		},
+		{
+			title: "Dashboard Analytics",
+			description:
+				"Dashboard interativo de analytics em tempo real com visualizações de dados complexas.",
+			image: "/analytics-dashboard-dark-theme.png",
+			tags: ["React", "D3.js", "WebSocket"],
+		},
 		// {
 		//   title: "Social Media App",
 		//   description: "Aplicação social com feed em tempo real, chat e notificações push.",
@@ -50,10 +51,10 @@ export function Projects() {
 					</p>
 				</div>
 
-				<div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+				<div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
 					{projects.map((project, index) => (
 						<Card
-							key={index}
+							key={index?.toString()}
 							className="group overflow-hidden bg-card border-border/40 hover:border-primary/50 transition-all"
 						>
 							<div className="relative h-48 overflow-hidden bg-muted">
@@ -79,7 +80,7 @@ export function Projects() {
 								<div className="flex flex-wrap gap-2">
 									{project.tags.map((tag, tagIndex) => (
 										<Badge
-											key={tagIndex}
+											key={tagIndex?.toString()}
 											variant="secondary"
 											className="text-xs"
 										>
