@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, Moon, Sun, X } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
@@ -12,28 +13,23 @@ export function Header() {
 	return (
 		<header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-xl">
 			<nav className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
-				<div className="flex lg:flex-1">
-					<a className="-m-1.5 p-1.5 flex items-center gap-2">
-						<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-							<svg
-								className="h-6 w-6 text-primary-foreground"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth={2}
-									d="M13 10V3L4 14h7v7l9-11h-7z"
-								/>
-							</svg>
-						</div>
-						<span className="text-xl font-bold text-foreground">ReactDev</span>
-					</a>
-				</div>
+				<section className="-m-1.5 p-1.5 flex items-center gap-2">
+					<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+						<Image
+							src="/logo_mn.png"
+							alt="logo MN Labs"
+							width={40}
+							height={40}
+							className="rounded-lg"
+						/>
+					</div>
+					<div className="flex flex-col">
+						<span className="text-sm font-bold text-foreground"> MN Labs </span>
+						<span className="text-xs">technology</span>
+					</div>
+				</section>
 
-				<div className="hidden lg:flex lg:gap-x-8">
+				<div className="hidden lg:flex items-center justify-center w-full lg:gap-x-8">
 					<a
 						href="#servicos"
 						className="text-sm font-semibold leading-6 text-muted-foreground hover:text-foreground transition-colors"
@@ -73,10 +69,10 @@ export function Header() {
 						<Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
 						<span className="sr-only">Alternar tema</span>
 					</Button>
-					<Button variant="ghost" size="sm" className="hidden lg:inline-flex">
+					{/* <Button variant="ghost" size="sm" className="hidden lg:inline-flex">
 						Entrar
-					</Button>
-					<Button size="sm">Começar Projeto</Button>
+					</Button> */}
+					{/* <Button size="sm">Começar Projeto</Button> */}
 				</div>
 
 				<div className="flex lg:hidden">

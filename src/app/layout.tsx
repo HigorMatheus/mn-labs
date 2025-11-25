@@ -21,8 +21,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className={roboto.variable}>
+			<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/logo_mn.png" />
+			</head>
 			<body className="antialiased dark " cz-shortcut-listen="true">
-				<ThemeProvider>{children}</ThemeProvider>
+				<ThemeProvider defaultTheme="system">{children}</ThemeProvider>
 			</body>
 		</html>
 	);
