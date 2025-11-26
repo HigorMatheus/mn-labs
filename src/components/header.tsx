@@ -9,7 +9,27 @@ import { Button } from "@/components/ui/button";
 export function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const { theme, setTheme } = useTheme();
+	function toggleTheme(actualTheme: "light" | "dark" | "system") {
+		if (actualTheme === "system") {
+			const isDarkMode = window.matchMedia(
+				"(prefers-color-scheme: dark)",
+			).matches;
 
+			if (isDarkMode) {
+				setTheme("light");
+				document.documentElement.classList.remove("dark");
+			} else {
+				setTheme("light");
+				document.documentElement.classList.add("dark");
+			}
+		} else if (actualTheme === "dark") {
+			setTheme("light");
+			document.documentElement.classList.remove("dark");
+		} else {
+			setTheme("dark");
+			document.documentElement.classList.add("dark");
+		}
+	}
 	return (
 		<header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-xl">
 			<nav className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
@@ -58,11 +78,12 @@ export function Header() {
 
 				<div className="flex flex-1 items-center justify-end gap-x-4">
 					<Button
+						type="button"
 						variant="ghost"
 						size="icon"
-						onClick={() =>
-							setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"))
-						}
+						onClick={() => {
+							toggleTheme(theme as "light" | "dark" | "system");
+						}}
 						className="h-9 w-9"
 					>
 						<Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

@@ -2,13 +2,12 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-/* @layer (theme, base, components, utilities); */
 
 body {
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-@theme inline {
+@theme  {
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);
 	--radius-lg: var(--radius);

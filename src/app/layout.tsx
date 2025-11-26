@@ -25,7 +25,7 @@ export default function RootLayout({
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/logo_mn.png" />
 			</head>
-			<body className="antialiased dark " cz-shortcut-listen="true">
+			<body className="antialiased" cz-shortcut-listen="true">
 				<ThemeProvider defaultTheme="system">{children}</ThemeProvider>
 			</body>
 		</html>
